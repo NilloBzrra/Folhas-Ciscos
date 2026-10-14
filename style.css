@@ -44,9 +44,9 @@ body {
 
     font-size: 85%;
 
-    color: var(--cor-branco);
+    color: var(--cor-floresta);
 
-    background-color: var(--cor-floresta);
+    background-color: var(--cor-papel);
 }
 
 
@@ -114,7 +114,7 @@ h1 {
 
     font-weight: 800;
 
-    color: var(--cor-branco);
+    color: var(--cor-floresta);
 }
 
 
@@ -126,7 +126,7 @@ h2 {
 
     font-size: 19px;
 
-    color: var(--cor-branco);
+    color: var(--cor-floresta);
 }
 
 
@@ -136,7 +136,7 @@ h3 {
 
     margin-top: 15px;
 
-    color: var(--cor-branco);
+    color: var(--cor-floresta);
 }
 
 
@@ -144,7 +144,7 @@ p {
 
     margin: 8px 0;
 
-    color: var(--cor-branco);
+    color: var(--cor-floresta);
 }
 
 
@@ -228,7 +228,7 @@ header nav.links-redes {
 
     background-color: transparent;
 
-    color: var(--cor-branco);
+    color: var(--cor-floresta);
 
     font-weight: bold;
 
@@ -236,7 +236,7 @@ header nav.links-redes {
 
     border-radius: 20px;
 
-    border: 1px solid var(--cor-branco);
+    border: 1px solid var(--cor-floresta);
 
     transition:
         background-color 0.3s,
@@ -247,6 +247,7 @@ header nav.links-redes {
 .btn-pages:hover {
 
     background-color: var(--cor-folha);
+    color: var(--cor-papel);
 
     border-color: var(--cor-folha)
 }
@@ -262,13 +263,13 @@ header nav.links-redes {
 
     height: 30px;
 
-    border: 1px solid var(--cor-branco);
+    border: 1px solid var(--cor-floresta);
 
     border-radius: 50%;
 
     background-color: transparent;
 
-    color: var(--cor-branco);
+    color: var(--cor-floresta);
 
     font-size: 18px;
 
@@ -286,9 +287,9 @@ header nav.links-redes {
 
 .btn-mais:hover {
 
-    background-color: var(--cor-folha);
-
-    border-color: var(--cor-folha);
+    background-color: var(--cor-terra);
+    color: var(--cor-papel);
+    border-color: var(--cor-terra);
 
     transform: rotate(90deg);
 }

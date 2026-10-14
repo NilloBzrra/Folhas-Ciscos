@@ -1,0 +1,199 @@
+/* 
+    1. RESET E CONFIGURAÇÕES GLOBAIS
+*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    min-height: 100vh;
+    background-color: #285675;
+    font-family: "Quattrocento Sans", sans-serif;
+    font-size: 85%;
+    color: #fafafa;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*
+    2. TIPOGRAFIA
+*/
+h1 {
+    font-family: "Quattrocento Sans", sans-serif;
+    font-weight: 800;
+    color: #fafafa;
+}
+
+h2 {
+    font-family: "Quattrocento Sans", sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 19px;
+    color: #e0e0e0; /* Ajustado para fundo escuro */
+}
+
+h3 {
+    font-family: "Quattrocento Sans", sans-serif;
+    font-weight: 700;
+    margin-top: 15px;
+    color: #fafafa; /* Ajustado para fundo escuro */
+}
+
+p {
+    font-family: "Quattrocento Sans", sans-serif;
+    margin: 8px 0;
+    color: #cccccc; /* Ajustado para fundo escuro */
+}
+
+/*
+    3. LAYOUT E ESTRUTURA (HEADER, MAIN, FOOTER)
+*/
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+    padding: 20px 1px;
+    background-color: #1b445c;
+}
+
+header .titulo {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+header .titulo h1 {
+    color: #fafafa;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+header .logo {
+    width: 70px;
+    margin: 0;
+    margin-left: 30px;
+}
+
+/* Navegação / Menus do Header */
+header nav.links-redes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+/* Conteúdo Principal */
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Container Centralizado */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 90%;
+    color: #aaaaaa;
+    width: 100%;
+}
+
+/*
+    4. COMPONENTES (BOTÕES E LINKS)
+*/
+
+/* Botões de navegação (Menu) */
+.btn-pages {
+    display: inline-block;
+    padding: 6px 14px;
+    background-color: transparent;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 20px;
+    border: 1px solid #ffffff;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-pages:hover {
+    background-color: #659b89;
+    border-color: #659b89;
+}
+
+/* Botão de Pré-salvar em Destaque */
+.btn-presave {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    margin-top: 10px;
+    background-color: #b45b32;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-presave:hover {
+    background-color: #4a9e82;
+    transform: translateY(-2px);
+}
+
+/*
+    5. RESPONSIVIDADE PARA CELULARES
+*/
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    header nav.links-redes {
+        flex-direction: column;
+        width: 100%;
+        gap: 7px;
+        padding: 12px 32px;
+    }
+
+    header nav.links-redes .btn-pages {
+        width: 100%;
+        padding: 10px;
+    }
+}

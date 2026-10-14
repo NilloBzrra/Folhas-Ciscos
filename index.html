@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Folhas&Ciscos</title>
+
+
+    <!-- ================= CSS ================= -->
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- ================= FONTES ================= -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- ================= ÍCONES ================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         CABEÇALHO
+         ========================================================= -->
+
+    <header>
+
+
+        <!-- ================= MARCA ================= -->
+
+        <div class="marca">
+
+            <img
+                class="logo"
+                src="Images/FecLogo.png"
+                alt="Folhas&Ciscos"
+            >
+
+            <div class="titulo">
+
+                <h1>
+                    Folhas&Ciscos
+                </h1>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             NAVEGAÇÃO DESKTOP
+             ===================================================== -->
+
+        <nav class="links-redes">
+
+
+            <a
+                class="btn-pages"
+                href="index.html"
+            >
+                Início
+            </a>
+
+
+            <a
+                class="btn-pages"
+                href="quemSomos.html"
+            >
+                Quem somos
+            </a>
+
+
+            <a
+                class="btn-pages"
+                href="Artistas.html"
+            >
+                Artistas
+            </a>
+
+
+            <a
+                class="btn-pages"
+                href="perfil.html"
+            >
+                Contato
+            </a>
+
+
+            <a
+                class="btn-pages"
+                href="https://instagram.com/folhaseciscos/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Instagram
+            </a>
+
+
+            <a
+                class="btn-pages"
+                href="paletaAzul.html"
+            >
+                Paleta Azul
+            </a>
+
+
+            <!-- Botão + -->
+
+            <button
+                id="btnMais"
+                class="btn-mais"
+                aria-label="Abrir mais opções"
+            >
+
+                <i class="fa-solid fa-plus"></i>
+
+            </button>
+
+
+        </nav>
+
+
+        <!-- =====================================================
+             BOTÃO MENU MOBILE
+             ===================================================== -->
+
+        <button
+            id="btnMenu"
+            class="btn-menu"
+            aria-label="Abrir menu"
+        >
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+        <!-- =====================================================
+             SIDEBAR
+             ===================================================== -->
+
+        <aside
+            id="sidebar"
+            class="sidebar"
+        >
+
+
+            <!-- Botão fechar -->
+
+            <button
+                id="btnFechar"
+                class="btn-fechar"
+                aria-label="Fechar menu"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+            <h2>
+                Menu
+            </h2>
+
+
+            <!-- Links principais -->
+
+            <nav class="menu-lateral">
+
+
+                <a href="index.html">
+                    Início
+                </a>
+
+
+                <a href="quemSomos.html">
+                    Quem somos
+                </a>
+
+
+                <a href="Artistas.html">
+                    Artistas
+                </a>
+
+
+                <a href="perfil.html">
+                    Contato
+                </a>
+
+
+                <a
+                    href="https://instagram.com/folhaseciscos/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Instagram
+                </a>
+
+
+                <a href="paletaAzul.html">
+                    Paleta Azul
+                </a>
+
+
+                <hr>
+
+
+                <h3>
+                    Mais opções
+                </h3>
+
+
+                <a href="#">
+                    Projetos
+                </a>
+
+
+                <a href="#">
+                    Discografia
+                </a>
+
+
+            </nav>
+
+
+        </aside>
+
+
+        <!-- =====================================================
+             FUNDO ESCURO
+             ===================================================== -->
+
+        <div
+            id="overlay"
+            class="overlay"
+        ></div>
+
+
+    </header>
+
+
+
+    <!-- =========================================================
+         DESTAQUE
+         ========================================================= -->
+
+   <section class="subtexto">
+
+    <div class="hero-conteudo">
+
+        <span class="hero-eyebrow">
+            FOLHAS&CISCOS
+        </span>
+
+        <h2>
+            Arranque os abrolhos.
+        </h2>
+
+        <h2>
+            Cultive canções.
+        </h2>
+
+        <p class="hero-descricao">
+            Um pequeno gesto de música, teologia & beleza.
+        </p>
+
+        <a
+            href="#musicas"
+            class="btn-hero"
+        >
+            Ouça nossas canções
+            <i class="fa-solid fa-arrow-down"></i>
+        </a>
+
+    </div>
+
+</section>
+
+
+
+
+    <!-- =========================================================
+         CONTEÚDO PRINCIPAL
+         ========================================================= -->
+
+
+            <div class="musicas-conteudo">
+
+    <div class="titulo-musicas">
+
+        <span>
+            NOSSA MÚSICA
+        </span>
+
+        <h3>
+            Ouça nossas canções
+        </h3>
+
+        <p>
+            Canções para ouvir, contemplar e cultivar.
+        </p>
+
+    </div>
+
+
+    <div class="lista-musicas">
+
+
+        <a
+            class="card-musica"
+            href="https://l.instagram.com/?u=https%3A%2F%2Fditto.fm%2Fpartida-hailton-costa"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <div class="numero-musica">
+                01
+            </div>
+
+            <div class="info-musica">
+
+                <strong>
+                    Partida
+                </strong>
+
+                <span>
+                    Ouvir canção
+                </span>
+
+            </div>
+
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+        </a>
+
+
+        <a
+            class="card-musica"
+            href="https://l.instagram.com/?u=https%3A%2F%2Fditto.fm%2Fpartida-hailton-costa"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <div class="numero-musica">
+                02
+            </div>
+
+            <div class="info-musica">
+
+                <strong>
+                    Ainda Não, Mas Já
+                </strong>
+
+                <span>
+                    Ouvir canção
+                </span>
+
+            </div>
+
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+        </a>
+
+
+        <a
+            class="card-musica"
+            href="https://l.instagram.com/?u=https%3A%2F%2Fditto.fm%2Fpartida-hailton-costa"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <div class="numero-musica">
+                03
+            </div>
+
+            <div class="info-musica">
+
+                <strong>
+                    Qual pai?
+                </strong>
+
+                <span>
+                    Ouvir canção
+                </span>
+
+            </div>
+
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+        </a>
+
+
+        <a
+            class="card-musica"
+            href="https://l.instagram.com/?u=https%3A%2F%2Fditto.fm%2Fpartida-hailton-costa"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <div class="numero-musica">
+                04
+            </div>
+
+            <div class="info-musica">
+
+                <strong>
+                    Convite
+                </strong>
+
+                <span>
+                    Ouvir canção
+                </span>
+
+            </div>
+
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+        </a>
+
+
+    </div>
+
+</div>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================================================
+         RODAPÉ
+         ========================================================= -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 - Todos os direitos reservados
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folhas&Ciscos</title>
+
+    <!-- Relaciona o style em todas as páginas -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+     <!-- ================= REGIÃO: CABEÇALHO ================= -->
+    <header>
+        <div class="marca">
+            <img class="logo" src="Images/FecLogo.png" alt="Folhas&Ciscos">
+            <div class="titulo">
+                <h1>Folhas&Ciscos</h1>
+            </div>
+        </div>
+
+        <nav class="links-redes">
+            <a class="btn-pages" href="index.html">Início</a>
+            <a class="btn-pages" href="quemSomos.html">Quem somos</a>
+            <a class="btn-pages" href="Artistas.html">Artistas</a>
+            <a class="btn-pages" href="perfil.html">Contato</a>
+            <a class="btn-pages" href="https://instagram.com/folhaseciscos/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a class="btn-pages" href="paletaAzul.html">Paleta Azul</a>
+
+            <!-- Botão + -->
+            <button id="btnMais" class="btn-mais" aria-label="Abrir mais opções">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+
+            <!--BOTÃO LATERAL-->
+
+            <aside id="sidebar" class="sidebar">
+
+                <button id="btnFechar" class="btn-fechar" aria-label="Fechar menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+                <h2>Mais opções</h2>
+
+                <nav class="menu-lateral">
+                    <a href="index.html">Início</a>
+                    <a href="Artistas.html">Artistas</a>
+                </nav>
+
+            </aside>
+
+            <!--Fundo atrás da sidebar-->
+            <div id="overlay" class="overlay"></div>
+
+        </nav>
+    </header>

@@ -1,0 +1,18 @@
+Passo 5 — Salvar sua alteração no histórico do Git
+Agora vamos conhecer uma das partes mais importantes do GitHub: o commit.
+
+No VS Code, clique no ícone de Source Control na barra lateral esquerda. Ele costuma parecer uma ramificação com bolinhas conectadas.
+
+Você verá o arquivo index.html na seção Changes.
+
+Clique no arquivo para conferir as diferenças. O VS Code destaca o texto removido e o texto adicionado.
+
+No campo de mensagem, escreva Atualiza título do site.
+
+Clique em Commit.
+
+Se aparecer uma mensagem pedindo para configurar seu nome e e-mail, abra o terminal do VS Code e execute estes comandos, substituindo os exemplos pelos seus dados:
+
+bash
+git config --global user.name "Seu Nome"
+git config --global user.email "seu-email@example.com"

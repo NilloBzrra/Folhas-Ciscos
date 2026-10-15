@@ -10,74 +10,41 @@
 
 
 :root {
-
     /* Identidade */
-
     --cor-floresta: #233529;
     --cor-musgo: #4a9e82;
     --cor-folha: #659b89;
     --cor-terra: #b45b32;
 
     /* Textos */
-
     --cor-branco: #fafafa;
     --cor-cinza-claro: #e0e0e0;
     --cor-cinza: #cccccc;
     --cor-cinza-escuro: #aaaaaa;
 
     /* Sidebar */
-
     --cor-papel: #f5f1e8;
     --cor-texto-escuro: #333333;
 
     /* Elementos */
-
     --cor-overlay: rgba(13, 14, 14, 0.404);
+
 }
 
 
 html,
 body {
     min-height: 100vh;
-
     font-family: "Quattrocento Sans", sans-serif;
-
     font-size: 85%;
-
     color: var(--cor-floresta);
-
     background-color: var(--cor-papel);
 }
 
-
 body {
-
-    background-image: url();
-
-    background-size: contain;
-
-    background-position: top;
-
-    background-repeat: no-repeat;
-}
-
-
-/* ==========================================================================
-   2. ESTRUTURA
-   ========================================================================== */
-
-body {
-
     display: grid;
-
     grid-template-columns: 1fr;
-
-    grid-template-rows:
-        auto
-        auto
-        1fr
-        auto;
-
+    grid-template-rows: auto auto 1fr auto;
     grid-template-areas:
         "cabecalho"
         "destaque"
@@ -88,652 +55,233 @@ body {
 
 header {
     grid-area: cabecalho;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+    padding: 15px 30px;
 }
 
 
 .subtexto {
     grid-area: destaque;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
 }
 
 
 main {
     grid-area: principal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 20px;
+    gap: 30px;
 }
 
 
 footer {
     grid-area: rodape;
-}
-
-
-/* ==========================================================================
-   3. TIPOGRAFIA
-   ========================================================================== */
-
-h1 {
-
-    font-weight: 800;
-
-    color: var(--cor-floresta);
-}
-
-
-h2 {
-
-    font-weight: bold;
-
-    font-style: italic;
-
-    font-size: 19px;
-
-    color: var(--cor-floresta);
-}
-
-
-h3 {
-
-    font-weight: 700;
-
-    margin-top: 15px;
-
-    color: var(--cor-floresta);
-}
-
-
-p {
-
-    margin: 8px 0;
-
-    color: var(--cor-floresta);
-}
-
-
-/* ==========================================================================
-   4. CABEÇALHO
-   ========================================================================== */
-
-header {
-
-    display: flex;
-
-    flex-direction: row;
-
-    justify-content: space-between;
-
-    align-items: center;
-
     text-align: center;
-
-    flex-wrap: wrap;
-
-    gap: 15px;
-
+    padding: 15px;
+    font-size: 90%;
+    color: var(--cor-cinza-escuro);
     width: 100%;
-
-    padding: 15px 30px;
-}
-
-
-/* Marca */
-
-.marca {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 10px;
-}
-
-
-header .logo {
-
-    width: 70px;
-}
-
-
-header .titulo h1 {
-
-    font-size: 1.8rem;
-
-    margin: 0;
 }
 
 
 /* ==========================================================================
-   5. MENU DESKTOP
+   2. TIPOGRAFIA E COMPONENTES GERAIS
    ========================================================================== */
+
+h1 { font-weight: 800; color: var(--cor-floresta); }
+h2 { font-weight: bold; font-style: italic; font-size: 19px; color: var(--cor-floresta); }
+h3 { font-weight: 700; margin-top: 15px; color: var(--cor-floresta); }
+p { margin: 8px 0; color: var(--cor-floresta); }
+
+.marca { display: flex; align-items: center; gap: 10px; }
+header .logo { width: 70px; }
+header .titulo h1 { font-size: 1.8rem; margin: 0; }
 
 header nav.links-redes {
-
     display: flex;
-
     flex-wrap: wrap;
-
     justify-content: center;
-
     align-items: center;
-
     gap: 10px;
 }
 
-
-/* Botões */
-
 .btn-pages {
-
     display: inline-block;
-
     padding: 6px 14px;
-
     background-color: transparent;
-
     color: var(--cor-floresta);
-
     font-weight: bold;
-
     text-decoration: none;
-
     border-radius: 20px;
-
     border: 1px solid var(--cor-floresta);
-
-    transition:
-        background-color 0.3s,
-        border-color 0.3s;
+    transition: background-color 0.3s, border-color 0.3s;
 }
-
 
 .btn-pages:hover {
-
     background-color: var(--cor-folha);
     color: var(--cor-papel);
-
-    border-color: var(--cor-folha)
+    border-color: var(--cor-folha);
 }
 
-
-/* ==========================================================================
-   6. BOTÃO +
-   ========================================================================== */
-
 .btn-mais {
-
     width: 30px;
-
     height: 30px;
-
     border: 1px solid var(--cor-floresta);
-
     border-radius: 50%;
-
     background-color: transparent;
-
     color: var(--cor-floresta);
-
     font-size: 18px;
-
     cursor: pointer;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     transition: 0.3s;
 }
 
-
 .btn-mais:hover {
-
     background-color: var(--cor-terra);
     color: var(--cor-papel);
     border-color: var(--cor-terra);
-
     transform: rotate(90deg);
 }
 
-
-/* ==========================================================================
-   7. BOTÃO HAMBÚRGUER
-   ========================================================================== */
-
 .btn-menu {
-
     display: none;
-
     width: 40px;
-
     height: 40px;
-
     border: 1px solid var(--cor-branco);
-
     border-radius: 50%;
-
     background-color: transparent;
-
     color: var(--cor-branco);
-
     font-size: 20px;
-
     cursor: pointer;
-
     align-items: center;
-
     justify-content: center;
-
     transition: 0.3s;
 }
 
-
 .btn-menu:hover {
-
     background-color: var(--cor-folha);
-
     border-color: var(--cor-folha);
 }
 
 
 /* ==========================================================================
-   8. DESTAQUE
-   ========================================================================== */
-
-.subtexto {
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    text-align: center;
-
-    padding: 40px 20px;
-}
-
-
-/* ==========================================================================
-   9. CONTEÚDO PRINCIPAL
-   ========================================================================== */
-
-main {
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: flex-start;
-
-    width: 100%;
-
-    padding: 20px;
-
-    gap: 30px;
-}
-
-
-.container {
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    text-align: center;
-
-    max-width: 500px;
-
-    width: 100%;
-
-    gap: 20px;
-
-    padding: 20px;
-}
-
-
-/* ==========================================================================
-   10. BOTÕES DAS CANÇÕES
-   ========================================================================== */
-
-.btn-presave {
-
-    display: inline-block;
-
-    padding: 12px 24px;
-
-    margin-top: 10px;
-
-    background-color: var(--cor-terra);
-
-    color: var(--cor-branco);
-
-    font-weight: bold;
-
-    text-decoration: none;
-
-    border-radius: 25px;
-
-    transition:
-        background-color 0.3s ease,
-        transform 0.3s ease;
-}
-
-
-.btn-presave:hover {
-
-    background-color: var(--cor-folha);
-
-    transform: translateY(-2px);
-}
-
-
-/* ==========================================================================
-   11. SIDEBAR
+   3. SIDEBAR E OVERLAY
    ========================================================================== */
 
 .sidebar {
-
     position: fixed;
-
     top: 0;
-
     right: 0;
-
     width: 300px;
-
     height: 100vh;
-
     background-color: var(--cor-papel);
-
     padding: 30px;
-
     z-index: 1001;
-
     transform: translateX(100%);
-
-    transition:
-        transform 0.35s ease;
-
-    box-shadow:
-        -5px 0 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.35s ease;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
 }
 
-
 .sidebar.aberta {
-
     transform: translateX(0);
 }
 
-
-/* ==========================================================================
-   12. BOTÃO FECHAR
-   ========================================================================== */
-
 .btn-fechar {
-
     position: absolute;
-
     top: 20px;
-
     right: 20px;
-
     width: 40px;
-
     height: 40px;
-
     border: none;
-
     border-radius: 50%;
-
     background: transparent;
-
     font-size: 24px;
-
     cursor: pointer;
-
     color: #233529;
 }
 
-
 .btn-fechar:hover {
-
-    background-color:
-        rgba(0, 0, 0, 0.08);
+    background-color: rgba(0, 0, 0, 0.08);
 }
-
-
-/* ==========================================================================
-   13. TÍTULO SIDEBAR
-   ========================================================================== */
 
 .sidebar h2 {
-
     margin-top: 60px;
-
     margin-bottom: 30px;
-
-    font-family:
-        "Quattrocento Sans",
-        sans-serif;
-
     font-size: 20px;
-
     color: var(--cor-floresta);
 }
 
-
 .sidebar h3 {
-
     margin-top: 25px;
-
     margin-bottom: 10px;
-
-    color: var(--cor-floresta);
-
     font-size: 16px;
 }
 
-
-/* ==========================================================================
-   14. LINKS SIDEBAR
-   ========================================================================== */
-
 .menu-lateral {
-
     display: flex;
-
     flex-direction: column;
-
     gap: 15px;
 }
 
-
 .menu-lateral a {
-
     color: var(--cor-texto-escuro);
-
     text-decoration: none;
-
-    font-family:
-        "Quattrocento Sans",
-        sans-serif;
-
     font-weight: bold;
-
     font-size: 18px;
-
     padding: 12px 10px;
-
-    border-bottom:
-        1px solid rgba(0, 0, 0, 0.15);
-
-    transition:
-        0.2s;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    transition: 0.2s;
 }
 
-
 .menu-lateral a:hover {
-
     padding-left: 18px;
-
     color: var(--cor-folha);
 }
 
-
-/* Linha */
-
 .menu-lateral hr {
-
     border: none;
-
-    border-top:
-        1px solid rgba(0, 0, 0, 0.5);
-
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
     margin: 10px 0;
 }
 
-
-/* ==========================================================================
-   15. OVERLAY
-   ========================================================================== */
-
 .overlay {
-
     position: fixed;
-
     top: 0;
-
     left: 0;
-
     width: 100%;
-
     height: 100%;
-
-    background:
-        var(--overlay);
-
+    background: var(--cor-overlay);
     z-index: 1000;
-
     opacity: 0;
-
     visibility: hidden;
-
-    transition:
-        0.3s;
+    transition: 0.3s;
 }
 
-
 .overlay.ativo {
-
     opacity: 1;
-
     visibility: visible;
 }
 
 
 /* ==========================================================================
-   16. RODAPÉ
-   ========================================================================== */
-
-footer {
-
-    text-align: center;
-
-    padding: 15px;
-
-    font-size: 90%;
-
-    color: var(--cor-cinza-escuro);
-
-    width: 100%;
-}
-
-
-/* ==========================================================================
-   17. RESPONSIVIDADE
-   ========================================================================== */
-
-/* =========================================================
-   TABLET / TELAS MENORES
-   ========================================================= */
-
-@media (max-width: 900px) {
-
-    /*
-       Esconde os botões principais
-    */
-
-    header nav.links-redes {
-
-        display: none;
-    }
-
-
-    /*
-       Mostra o botão hambúrguer
-    */
-
-    .btn-menu {
-
-        display: flex;
-    }
-
-
-    /*
-       Cabeçalho
-    */
-
-    header {
-
-        padding: 15px 20px;
-    }
-
-}
-
-
-/* =========================================================
-   CELULAR
-   ========================================================= */
-
-@media (max-width: 600px) {
-
-    header {
-
-        padding: 12px 15px;
-    }
-
-
-    header .logo {
-
-        width: 55px;
-    }
-
-
-    header .titulo h1 {
-
-        font-size: 1.5rem;
-    }
-
-
-    .subtexto {
-
-        padding: 30px 15px;
-    }
-
-
-    .sidebar {
-
-        width: 280px;
-    }
-
-}
-
-/* ==========================================================================
-   HERO
+   4. HERO
    ========================================================================== */
 
 .hero-conteudo {
@@ -741,391 +289,241 @@ footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
-
     max-width: 700px;
-
     margin: 0 auto;
 }
 
-
-/* Pequeno título acima */
-
 .hero-eyebrow {
     margin-bottom: 15px;
-
     color: var(--verde-hover);
-
     font-size: 0.8rem;
-
     font-weight: bold;
-
     letter-spacing: 4px;
-
     opacity: 0;
-
     animation: heroAparecer 0.8s ease forwards;
 }
 
-
-/* Frases principais */
-
 .hero-conteudo h2 {
     font-size: clamp(28px, 5vw, 48px);
-
     line-height: 1.15;
-
     margin: 2px 0;
-
     opacity: 0;
-
     transform: translateY(15px);
-
     animation: heroSubir 0.8s ease forwards;
 }
 
-
-/* Primeira frase */
-
-.hero-conteudo h2:nth-of-type(1) {
-    animation-delay: 0.15s;
-}
-
-
-/* Segunda frase */
-
-.hero-conteudo h2:nth-of-type(2) {
-    animation-delay: 0.3s;
-}
-
-
-/* Descrição */
+.hero-conteudo h2:nth-of-type(1) { animation-delay: 0.15s; }
+.hero-conteudo h2:nth-of-type(2) { animation-delay: 0.3s; }
 
 .hero-descricao {
     max-width: 450px;
-
     margin-top: 25px;
-
     color: var(--cinza-texto);
-
     font-size: 1.1rem;
-
     line-height: 1.6;
-
     opacity: 0;
-
     transform: translateY(15px);
-
     animation: heroSubir 0.8s ease forwards;
-
     animation-delay: 0.45s;
 }
 
-
-/* Botão */
-
 .btn-hero {
     display: inline-flex;
-
     align-items: center;
-
     gap: 10px;
-
     margin-top: 25px;
-
     padding: 12px 22px;
-
     border: 1px solid var(--verde-destaque);
-
     border-radius: 25px;
-
     color: var(--branco);
-
     text-decoration: none;
-
     font-weight: bold;
-
     background-color: transparent;
-
     opacity: 0;
-
     transform: translateY(15px);
-
     animation: heroSubir 0.8s ease forwards;
-
     animation-delay: 0.6s;
-
-    transition:
-        background-color 0.3s ease,
-        transform 0.3s ease,
-        border-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
 }
-
 
 .btn-hero:hover {
     background-color: var(--verde-destaque);
-
     border-color: var(--verde-destaque);
-
     transform: translateY(-3px);
 }
 
-
-.btn-hero i {
-    transition: transform 0.3s ease;
-}
-
-
-.btn-hero:hover i {
-    transform: translateY(3px);
-}
+.btn-hero i { transition: transform 0.3s ease; }
+.btn-hero:hover i { transform: translateY(3px); }
 
 
 /* ==========================================================================
-   ANIMAÇÕES DO HERO
+   5. ANIMAÇÕES
    ========================================================================== */
 
 @keyframes heroAparecer {
-
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
-
 
 @keyframes heroSubir {
-
-    from {
-        opacity: 0;
-
-        transform: translateY(15px);
-    }
-
-    to {
-        opacity: 1;
-
-        transform: translateY(0);
-    }
-
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
+
 /* ==========================================================================
-   SEÇÃO DE MÚSICAS
+   6. SEÇÃO DE MÚSICAS & CARDS VERTICAIS
    ========================================================================== */
 
 #musicas {
     scroll-margin-top: 30px;
 }
 
-
 .musicas-conteudo {
     width: 100%;
-
-    max-width: 650px;
-
+    max-width: 800px;
     margin: 0 auto;
-
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
 }
-
-
-/* --------------------------------------------------------------------------
-   TÍTULO
-   -------------------------------------------------------------------------- */
 
 .titulo-musicas {
     text-align: center;
-
     margin-bottom: 25px;
 }
 
-
 .titulo-musicas span {
     display: block;
-
     margin-bottom: 8px;
-
     color: var(--verde-destaque);
-
     font-size: 0.75rem;
-
     font-weight: bold;
-
     letter-spacing: 3px;
 }
 
-
 .titulo-musicas h3 {
     margin: 0;
-
     font-size: 1.6rem;
-
     text-transform: uppercase;
 }
 
-
 .titulo-musicas p {
     margin-top: 8px;
-
     color: var(--cinza-texto);
 }
 
-
-/* --------------------------------------------------------------------------
-   LISTA
-   -------------------------------------------------------------------------- */
-
 .lista-musicas {
     width: 100%;
-
     display: flex;
-
-    flex-direction: column;
-
-    gap: 10px;
+    flex-wrap: wrap;        /* Alinha os cards em grade, indo para a próxima linha */
+    justify-content: center; /* Centraliza os cards na tela */
+    gap: 20px;               /* Espaçamento entre os cards verticais */
 }
 
-
-/* --------------------------------------------------------------------------
-   CARD
-   -------------------------------------------------------------------------- */
-
+/* Container principal do card em formato vertical */
 .card-musica {
     display: flex;
-
-    align-items: center;
-
-    width: 100%;
-
-    min-height: 70px;
-
-    padding: 12px 18px;
-
+    flex-direction: column; /* Organiza a imagem em cima e o conteúdo embaixo */
+    width: 220px;           /* Largura fixa do card vertical */
     border: 1px solid rgba(250, 250, 250, 0.18);
-
-    border-radius: 12px;
-
+    border-radius: 16px;
     background-color: rgba(35, 53, 41, 0.35);
-
     color: var(--branco);
-
     text-decoration: none;
-
-    transition:
-        background-color 0.3s ease,
-        border-color 0.3s ease,
-        transform 0.3s ease;
+    overflow: hidden;       /* Garante que a imagem respeite as bordas arredondadas */
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
 }
-
 
 .card-musica:hover {
     background-color: rgba(74, 158, 130, 0.18);
-
     border-color: var(--verde-destaque);
-
-    transform: translateX(5px);
+    transform: translateY(-5px); /* Efeito suave de subida ao passar o mouse */
 }
 
+/* Capa ocupando toda a largura superior do card vertical */
+.capa-musica {
+    width: 100%;
+    height: 220px;          /* Mantém a capa quadrada no topo */
+    object-fit: cover;
+    border-radius: 0;
+    flex-shrink: 0;
+}
 
-/* --------------------------------------------------------------------------
-   NÚMERO
-   -------------------------------------------------------------------------- */
+/* Bloco inferior com os textos e ícones */
+.conteudo-card {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    gap: 10px;
+    width: 100%;
+}
 
 .numero-musica {
-    width: 40px;
-
     color: var(--cinza-footer);
-
     font-size: 0.8rem;
-
     font-weight: bold;
 }
 
-
-/* --------------------------------------------------------------------------
-   INFORMAÇÕES
-   -------------------------------------------------------------------------- */
-
 .info-musica {
     display: flex;
-
     flex-direction: column;
-
     flex: 1;
-
-    gap: 4px;
+    gap: 2px;
 }
 
-
 .info-musica strong {
-    font-size: 1.05rem;
-
+    font-size: 0.95rem;
     color: var(--branco);
 }
 
-
 .info-musica span {
     color: var(--cinza-footer);
-
-    font-size: 0.8rem;
+    font-size: 0.75rem;
 }
 
-
-/* --------------------------------------------------------------------------
-   ÍCONE
-   -------------------------------------------------------------------------- */
-
-.card-musica > i {
+.card-musica i {
     color: var(--cinza-claro);
-
-    font-size: 14px;
-
-    transition:
-        color 0.3s ease,
-        transform 0.3s ease;
+    font-size: 12px;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-
-.card-musica:hover > i {
+.card-musica:hover i {
     color: var(--verde-destaque);
-
-    transform: translate(3px, -3px);
+    transform: translate(2px, -2px);
 }
 
 
 /* ==========================================================================
-   RESPONSIVIDADE
+   7. RESPONSIVIDADE
    ========================================================================== */
 
+@media (max-width: 900px) {
+    header nav.links-redes {
+        display: none;
+    }
+    .btn-menu {
+        display: flex;
+    }
+    header {
+        padding: 15px 20px;
+    }
+}
+
 @media (max-width: 600px) {
-
-    .musicas-conteudo {
-        width: 100%;
+    header {
+        padding: 12px 15px;
     }
-
-
-    .card-musica {
-        min-height: 65px;
-
-        padding: 10px 14px;
+    header .logo {
+        width: 55px;
     }
-
-
-    .numero-musica {
-        width: 32px;
+    header .titulo h1 {
+        font-size: 1.5rem;
     }
-
-
-    .info-musica strong {
-        font-size: 0.95rem;
+    .subtexto {
+        padding: 30px 15px;
     }
-
+    .sidebar {
+        width: 280px;
+    }
 }

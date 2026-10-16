@@ -109,7 +109,7 @@ h3 { font-weight: 700; margin-top: 15px; color: var(--cor-floresta); }
 p { margin: 8px 0; color: var(--cor-floresta); }
 
 .marca { display: flex; align-items: center; gap: 10px; }
-header .logo { width: 70px; }
+header .logo { width: 90px; margin-left: 20px; margin-top: 5px; }
 header .titulo h1 { font-size: 1.8rem; margin: 0; }
 
 header nav.links-redes {
@@ -382,7 +382,7 @@ header nav.links-redes {
 .musicas-conteudo {
     width: 100%;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -426,9 +426,9 @@ header nav.links-redes {
     display: flex;
     flex-direction: column; /* Organiza a imagem em cima e o conteúdo embaixo */
     width: 220px;           /* Largura fixa do card vertical */
-    border: 1px solid rgba(250, 250, 250, 0.18);
+    border: 1px solid rgba(133, 67, 23, 0.123);
     border-radius: 16px;
-    background-color: rgba(35, 53, 41, 0.35);
+    background-color: var(--cor-papel);
     color: var(--branco);
     text-decoration: none;
     overflow: hidden;       /* Garante que a imagem respeite as bordas arredondadas */

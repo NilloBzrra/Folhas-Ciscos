@@ -1,3 +1,4 @@
+
 /* ==========================================================================
    1. RESET E CONFIGURAÇÕES GLOBAIS
    ========================================================================== */
@@ -8,9 +9,9 @@
     padding: 0;
 }
 
-
+/* Paleta de cores */
 :root {
-    /* Identidade */
+    /* Identidade visual */
     --cor-floresta: #233529;
     --cor-musgo: #4a9e82;
     --cor-folha: #659b89;
@@ -22,16 +23,15 @@
     --cor-cinza: #cccccc;
     --cor-cinza-escuro: #aaaaaa;
 
-    /* Sidebar */
+    /* Sidebar e fundos */
     --cor-papel: #f5f1e8;
     --cor-texto-escuro: #333333;
 
     /* Elementos */
     --cor-overlay: rgba(13, 14, 14, 0.404);
-
 }
 
-
+/* Configurações gerais */
 html,
 body {
     min-height: 100vh;
@@ -53,6 +53,10 @@ body {
 }
 
 
+/* ==========================================================================
+   2. CABEÇALHO
+   ========================================================================== */
+
 header {
     grid-area: cabecalho;
     display: flex;
@@ -66,51 +70,24 @@ header {
     padding: 15px 30px;
 }
 
-
-.subtexto {
-    grid-area: destaque;
+.marca {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    text-align: center;
-    padding: 40px 20px;
+    gap: 10px;
 }
 
-
-main {
-    grid-area: principal;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    padding: 20px;
-    gap: 30px;
+header .logo {
+    width: 90px;
+    margin-left: 20px;
+    margin-top: 5px;
 }
 
-
-footer {
-    grid-area: rodape;
-    text-align: center;
-    padding: 15px;
-    font-size: 90%;
-    color: var(--cor-cinza-escuro);
-    width: 100%;
+header .titulo h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: 800;
+    color: var(--cor-floresta);
 }
-
-
-/* ==========================================================================
-   2. TIPOGRAFIA E COMPONENTES GERAIS
-   ========================================================================== */
-
-h1 { font-weight: 800; color: var(--cor-floresta); }
-h2 { font-weight: bold; font-style: italic; font-size: 19px; color: var(--cor-floresta); }
-h3 { font-weight: 700; margin-top: 15px; color: var(--cor-floresta); }
-p { margin: 8px 0; color: var(--cor-floresta); }
-
-.marca { display: flex; align-items: center; gap: 10px; }
-header .logo { width: 90px; margin-left: 20px; margin-top: 5px; }
-header .titulo h1 { font-size: 1.8rem; margin: 0; }
 
 header nav.links-redes {
     display: flex;
@@ -119,6 +96,11 @@ header nav.links-redes {
     align-items: center;
     gap: 10px;
 }
+
+
+/* ==========================================================================
+   3. BOTÕES E NAVEGAÇÃO
+   ========================================================================== */
 
 .btn-pages {
     display: inline-block;
@@ -182,7 +164,69 @@ header nav.links-redes {
 
 
 /* ==========================================================================
-   3. SIDEBAR E OVERLAY
+   4. DESTAQUE E TIPOGRAFIA
+   ========================================================================== */
+
+.subtexto {
+    grid-area: destaque;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+h1 {
+    font-weight: 800;
+    color: var(--cor-floresta);
+}
+
+h2 {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 19px;
+    color: var(--cor-floresta);
+}
+
+h3 {
+    font-weight: 700;
+    margin-top: 15px;
+    color: var(--cor-floresta);
+}
+
+p {
+    margin: 8px 0;
+    color: var(--cor-floresta);
+}
+
+
+/* ==========================================================================
+   5. CONTEÚDO PRINCIPAL E RODAPÉ
+   ========================================================================== */
+
+main {
+    grid-area: principal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 20px;
+    gap: 30px;
+}
+
+footer {
+    grid-area: rodape;
+    text-align: center;
+    padding: 15px;
+    font-size: 90%;
+    color: var(--cor-cinza-escuro);
+    width: 100%;
+}
+
+
+/* ==========================================================================
+   6. SIDEBAR E OVERLAY
    ========================================================================== */
 
 .sidebar {
@@ -214,7 +258,7 @@ header nav.links-redes {
     background: transparent;
     font-size: 24px;
     cursor: pointer;
-    color: #233529;
+    color: var(--cor-floresta);
 }
 
 .btn-fechar:hover {
@@ -263,8 +307,7 @@ header nav.links-redes {
 
 .overlay {
     position: fixed;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
     height: 100%;
     background: var(--cor-overlay);
@@ -281,7 +324,7 @@ header nav.links-redes {
 
 
 /* ==========================================================================
-   4. HERO
+   7. HERO
    ========================================================================== */
 
 .hero-conteudo {
@@ -312,8 +355,13 @@ header nav.links-redes {
     animation: heroSubir 0.8s ease forwards;
 }
 
-.hero-conteudo h2:nth-of-type(1) { animation-delay: 0.15s; }
-.hero-conteudo h2:nth-of-type(2) { animation-delay: 0.3s; }
+.hero-conteudo h2:nth-of-type(1) {
+    animation-delay: 0.15s;
+}
+
+.hero-conteudo h2:nth-of-type(2) {
+    animation-delay: 0.3s;
+}
 
 .hero-descricao {
     max-width: 450px;
@@ -343,7 +391,10 @@ header nav.links-redes {
     transform: translateY(15px);
     animation: heroSubir 0.8s ease forwards;
     animation-delay: 0.6s;
-    transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        border-color 0.3s ease;
 }
 
 .btn-hero:hover {
@@ -352,27 +403,44 @@ header nav.links-redes {
     transform: translateY(-3px);
 }
 
-.btn-hero i { transition: transform 0.3s ease; }
-.btn-hero:hover i { transform: translateY(3px); }
+.btn-hero i {
+    transition: transform 0.3s ease;
+}
+
+.btn-hero:hover i {
+    transform: translateY(3px);
+}
 
 
 /* ==========================================================================
-   5. ANIMAÇÕES
+   8. ANIMAÇÕES
    ========================================================================== */
 
 @keyframes heroAparecer {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes heroSubir {
-    from { opacity: 0; transform: translateY(15px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
 /* ==========================================================================
-   6. SEÇÃO DE MÚSICAS & CARDS VERTICAIS
+   9. SEÇÃO DE MÚSICAS
    ========================================================================== */
 
 #musicas {
@@ -413,98 +481,107 @@ header nav.links-redes {
     color: var(--cinza-texto);
 }
 
+
+/* ==========================================================================
+   10. LISTA E CARDS DAS MÚSICAS
+   ========================================================================== */
+
 .lista-musicas {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;        /* Alinha os cards em grade, indo para a próxima linha */
-    justify-content: center; /* Centraliza os cards na tela */
-    gap: 20px;               /* Espaçamento entre os cards verticais */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
-/* Container principal do card em formato vertical */
+/* Estrutura externa do card */
 .card-musica {
     display: flex;
-    flex-direction: column; /* Organiza a imagem em cima e o conteúdo embaixo */
-    width: 220px;           /* Largura fixa do card vertical */
-    border: 1px solid rgba(133, 67, 23, 0.123);
-    border-radius: 16px;
+    flex-direction: column;
+    width: 220px;
+    border: 1px solid rgba(35, 53, 41, 0.18);
+    border-radius: 18px;
     background-color: var(--cor-papel);
-    color: var(--branco);
+    color: var(--cor-texto-escuro);
     text-decoration: none;
-    overflow: hidden;       /* Garante que a imagem respeite as bordas arredondadas */
-    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    overflow: hidden;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .card-musica:hover {
-    background-color: rgba(74, 158, 130, 0.18);
-    border-color: var(--verde-destaque);
-    transform: translateY(-5px); /* Efeito suave de subida ao passar o mouse */
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(35, 53, 41, 0.15);
 }
 
-/* Capa ocupando toda a largura superior do card vertical */
+/* Capa quadrada */
 .capa-musica {
+    display: block;
     width: 100%;
-    height: 220px;          /* Mantém a capa quadrada no topo */
+    aspect-ratio: 1 / 1;
     object-fit: cover;
-    border-radius: 0;
     flex-shrink: 0;
+    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    mask-image: linear-gradient(to bottom, rgb(5, 5, 5) 50%, transparent 100%);
 }
 
-/* Bloco inferior com os textos e ícones */
+/* Retângulo inferior */
 .conteudo-card {
     display: flex;
-    align-items: center;
-    padding: 15px;
-    gap: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
     width: 100%;
+    padding: 8px 12px 10px;
+    background-color: var(--cor-floresta);
+    text-align: left;
 }
 
-.numero-musica {
-    color: var(--cinza-footer);
-    font-size: 0.8rem;
-    font-weight: bold;
-}
 
+
+/* Grupo de informações */
 .info-musica {
     display: flex;
     flex-direction: column;
-    flex: 1;
-    gap: 2px;
+    align-items: flex-start;
+    gap: 3px;
+    width: 100%;
 }
 
+/* Título da música */
 .info-musica strong {
-    font-size: 0.95rem;
-    color: var(--branco);
+    margin-left: 20px;
+    font-size: 1.05rem;
+    line-height: 1.2;
+    font-weight: bold;
+    margin-top: 8px;
+    color: var(--cor-texto-escuro);
 }
 
+/* Nome do artista */
 .info-musica span {
-    color: var(--cinza-footer);
-    font-size: 0.75rem;
-}
-
-.card-musica i {
-    color: var(--cinza-claro);
-    font-size: 12px;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.card-musica:hover i {
-    color: var(--verde-destaque);
-    transform: translate(2px, -2px);
+    font-size: 0.8rem;
+    line-height: 1.2;
+    margin-left: 20px;
+    margin-bottom: 8px;
+    color: var(--cor-texto-escuro);
 }
 
 
 /* ==========================================================================
-   7. RESPONSIVIDADE
+   11. RESPONSIVIDADE
    ========================================================================== */
 
 @media (max-width: 900px) {
     header nav.links-redes {
         display: none;
     }
+
     .btn-menu {
         display: flex;
     }
+
     header {
         padding: 15px 20px;
     }
@@ -514,16 +591,25 @@ header nav.links-redes {
     header {
         padding: 12px 15px;
     }
+
     header .logo {
         width: 55px;
     }
+
     header .titulo h1 {
         font-size: 1.5rem;
     }
+
     .subtexto {
         padding: 30px 15px;
     }
+
     .sidebar {
         width: 280px;
+    }
+
+    .card-musica {
+        width: 220px;
+        max-width: 100%;
     }
 }
